@@ -4,11 +4,14 @@ import Post from './Post'
 import NewPost from './NewPost'
 import styles from './Postlist.module.css'
 function Postlist() {
+// enteredBody: เก็บ text ที่ใส่ใน NewPost component
+// enteredAuthor: เก็บชื่อที่ใส่ใน NewPost component
   const [enteredBody, setEnteredBody] = useState('') ;
   const [enteredAuthor , setEnteredAuthor] = useState();
+// stateใช้ติดตามค่าที่เปลี่ยนเเปลง
 
-
-  // รวบข้อมูลที่ผู้ใช้กรอกมา เป็นfunc
+//  อัปเดต enteredBody state กับค่าที่ใส่ใน textarea
+//  อัปเดต enteredAuthor state กับค่าที่ใส่ใน text input
    function bodyChangeHandler(event){
    setEnteredBody(event.target.value);
    }
