@@ -1,18 +1,7 @@
 body {
-  background: rgb(2, 0, 36); /* Main background color */
-  background-image: linear-gradient(
-    to bottom,
-    rgba(2, 0, 36, 1) 0%, /* Start color */
-    rgba(121, 9, 103, 1) 0%, /* Color transition 1 */
-    rgba(117, 16, 108, 1) 5%, /* Color transition 2 */
-    rgba(114, 22, 112, 1) 9%, /* Color transition 3 */
-    rgba(62, 108, 177, 1) 68%, /* Color transition 4 */
-    rgba(0, 212, 255, 1) 100% /* End color */
-  );
   margin: 0;
- 
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
+  justify-content: center; 
+  align-items: center; 
   min-width: 320px;
   min-height: 100vh;
 }
