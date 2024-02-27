@@ -6,7 +6,7 @@ function Modal({ children }) {
    <>
    <div className={classes.backdrop}/>
    {/*{children} อ้างถึงcontentที่modalคุมอยู่  openคือถ้าdialog open=true*/}
-    <dialog open= {false}className={classes.modal}>
+    <dialog open= {true}className={classes.modal}>
         {children}
     </dialog>
    </>
