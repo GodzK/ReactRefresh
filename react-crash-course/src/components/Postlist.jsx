@@ -4,9 +4,10 @@ import Post from "./Post";
 import NewPost from "./NewPost";
 import Modal from "./Modal";
 import styles from "./Postlist.module.css";
-function Postlist() {
+function Postlist({isPosting , onStopPosting}) {
   // enteredBody: เก็บ text ที่ใส่ใน NewPost component
   // enteredAuthor: เก็บชื่อที่ใส่ใน NewPost component
+ 
   const [enteredBody, setEnteredBody] = useState("");
   const [enteredAuthor, setEnteredAuthor] = useState();
   // stateใช้ติดตามค่าที่เปลี่ยนเเปลง
@@ -22,13 +23,14 @@ function Postlist() {
 
   return (
     <>
-    {/* wrap component ด้วยcosom compo */}
-    <Modal>
+    {isPosting ? (<Modal onClose ={onStopPosting}>
       <NewPost
         onBodyChange={bodyChangeHandler}
         onAuthorChange={authorChangeHandler}
       />
     </Modal>
+    ) : false }
+    
       
       <ul className={styles.posts}>
         <Post author={enteredAuthor} body={enteredBody} />
