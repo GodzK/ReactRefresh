@@ -24,12 +24,24 @@ function addPostHandler(postData){
       />
     </Modal>
     )}
+    {posts.length > 0 && (
       <ul className={styles.posts}> 
-      {/* map return new array */}
-      {posts.map((post)=><Post author={post.author} body={post.body} />)} 
+      
+      {posts.map((post)=>(<Post key ={post.body}author={post.author} body={post.body} /> 
+      ))}
       </ul>
+  )}
+
+  {posts.length === 0 && (
+    <div style={{textAlign:'center', color : 'white'}}>
+      <h2>Type SOmething</h2>
+      <p>memery🎃</p>
+    </div>
+  )}
     </>
-  );
-}
+  );}
+    
+      
+
 
 export default Postlist;
