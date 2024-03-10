@@ -1,12 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import classes from './Modal.module.css';
 // props children change to specific value
-function Modal({ children , onClose }) {
+function Modal({ children}) {
+
+  const navigate = useNavigate();
+  
+  function closeHandler(){
+  navigate("..");
+  // SIMILAR TO /
+  }
   return (
    <>
-   <div className={classes.backdrop} onClick={onClose}/>
-   {/*{children} อ้างถึงcontentที่modalคุมอยู่  openคือถ้าdialog open=true*/}
-    <dialog open= {true}className={classes.modal}>
+   <div className={classes.backdrop} onClick={closeHandler}/>
+  
+    <dialog open className={classes.modal}>
         {children}
     </dialog>
    </>
