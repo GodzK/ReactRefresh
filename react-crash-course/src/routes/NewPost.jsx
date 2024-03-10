@@ -27,13 +27,13 @@ function NewPost({}) {
 
 export default NewPost;
 export async function action({request}) {
-const formData = await request.formData();// {body:'..' router=".."}
+const formData = await request.formData();
  const postData = Object.fromEntries(formData);
-  await fetch("http://localhost:8080/posts", {
-    method: "POST",
+  await fetch('http://localhost:8080/posts', {
+    method: 'POST',
     body: JSON.stringify(postData),
     headers: {
-      "Content-type": "application/json",
+      'Content-Type': 'application/json',
     },
   });
 
