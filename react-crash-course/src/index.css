@@ -8,7 +8,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  background-image: radial-gradient(ellipse at top left, #7f50e4, #4c05d0);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0, 0, 0) 19%, rgba(140,8,8,1) 100%, rgb(254, 255, 255) 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

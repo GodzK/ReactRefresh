@@ -22,7 +22,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background-color: #a990fb;
+    background-color: #ffffff;
     color: #2a2630;
     border: none;
     border-radius: 4px;
@@ -33,5 +33,7 @@
   }
   
   .button:hover {
-    background-color: #8c6cf7;
+    background-color: #000000;
+    color: #ffffff;
+    transition: 555ms;
   }
